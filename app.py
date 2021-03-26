@@ -13,7 +13,7 @@ def index():
 
 @app.route('/get_frame', methods=['GET', 'POST'])
 def get_frame():
-    if request.type == 'POST':
+    if request.method == 'POST':
         url = request.args.get('url', type=str)
         filename = get_last_frame(url)
         return send_file(filename)
