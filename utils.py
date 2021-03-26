@@ -19,7 +19,7 @@ def iterate_until_last_frame(filename):
 
 
 def get_last_frame(url):
-    filename = uuid.uuid4()
+    filename = 'static/'+str(uuid.uuid4())+'.png'
 
     file = requests.get(url)
     with open("file.gif", "wb") as f:
