@@ -18,7 +18,7 @@ def iterate_until_last_frame(filename):
 
 
 def get_last_frame(url):
-    filename = 'result.png'
+    filename = 'static/result.png'
 
     file = requests.get(url)
     with open("file.gif", "wb") as f:
