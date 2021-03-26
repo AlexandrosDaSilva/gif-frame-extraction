@@ -1,6 +1,7 @@
 from urllib.request import urlretrieve
 import requests
 from PIL import Image
+import uuid
 
 
 def iterate_until_last_frame(filename):
@@ -18,7 +19,7 @@ def iterate_until_last_frame(filename):
 
 
 def get_last_frame(url):
-    filename = 'static/result.png'
+    filename = uuid.uuid4()
 
     file = requests.get(url)
     with open("file.gif", "wb") as f:
