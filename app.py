@@ -14,7 +14,6 @@ def index():
 @app.route('/get_frame', methods=['GET', 'POST'])
 def get_frame():
     url = request.args.get('url', type=str)
-    # url = request.get_json()['url']
     filename = get_last_frame(url)
     return send_file(filename)
 
