@@ -21,7 +21,9 @@ def get_frame():
     if url:
         filename = get_last_frame(url)
         return render_template('index.html', url='https://gif-frame-extraction.herokuapp.com/'+filename)
+        # return send_file('https://gif-frame-extraction.herokuapp.com/'+filename)
         # return send_file(filename)
+        # return filename
     return render_template('index.html', url='What rubbish did you use as a url parameter?')
 
 
