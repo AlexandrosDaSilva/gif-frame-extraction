@@ -24,7 +24,7 @@ def get_frame():
         # return send_file('https://gif-frame-extraction.herokuapp.com/'+filename)
         # return send_file(filename)
         # return filename
-    return render_template('index.html', url='What rubbish did you use as a url parameter?')
+    return render_template('index.html', url='')
 
 
 if __name__ == '__main__':
