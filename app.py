@@ -20,11 +20,11 @@ def get_frame():
     url = request.args.get('url', type=str)
     if url:
         filename = get_last_frame(url)
-        return render_template('index.html', url='https://gif-frame-extraction.herokuapp.com/'+filename)
+        return render_template('index.html', url="https://gif-frame-extraction.herokuapp.com/"+filename)
         # return send_file('https://gif-frame-extraction.herokuapp.com/'+filename)
         # return send_file(filename)
         # return filename
-    return render_template('index.html', url='')
+    return render_template('index.html', url="It's not a gif!")
 
 
 if __name__ == '__main__':
